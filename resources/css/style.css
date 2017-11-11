@@ -1,4 +1,6 @@
-/* Universal Styles */
+/* Universal Styles
+I would love specific feedback relating to transitions between different screen size,
+My webiste isn't exactly responsive when enlarging/minimizing window width..*/
 
 html {
   font-size: 16px;
@@ -560,6 +562,8 @@ button:hover{
   display: none;
 }
 .footer-mobile {
+  display: flex;
+  sbackground-color: rgb(244, 244, 244);
   padding-top: 2.5rem;
   padding-left: 1rem;
   padding-bottom: 1rem;
