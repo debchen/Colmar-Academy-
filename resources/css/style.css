@@ -1,0 +1,568 @@
+/* Universal Styles */
+
+html {
+  font-size: 16px;
+  color: rgb(55, 55, 55);
+}
+
+.main-content {
+  position: relative;
+  top: 4rem; /* to offset for fixed header. */
+}
+.image-container {
+  overflow: hidden;
+}
+.image-container img {
+  display: block;
+}
+@media only screen and (max-width: 480px) {
+  .main-content {
+    top: 4rem;
+  }
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 4px rgb(55, 55, 55);
+  background-color: rgb(244, 244, 244);
+  height: 4rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  z-index: 1;
+}
+.header-desktop {
+  display: flex;
+  padding: 1rem 1.5rem;
+}
+.header-desktop .logo {
+  height: 2rem;
+  flex-grow: 1;
+}
+.logo img {
+  height:100%;
+}
+.logo span {
+  font-size: 1rem;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 700;
+  padding-left: 0.5rem;
+  align-items: center;
+}
+.header-desktop nav {
+  align-items: center;
+}
+.header-desktop nav ul {
+  display: flex;
+}
+nav li {
+  padding-left: 1rem;
+}
+nav a {
+  align-items: center;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 400;
+  color: rgb(55, 55, 55);
+}
+.header-mobile {
+  display: none;
+}
+@media only screen and (max-width:480px) {
+  .header-desktop {
+    display: none;
+  }
+  .header-mobile {
+    display: flex;
+  }
+  .header-mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .header-mobile li {
+    padding: 1rem;
+  }
+}
+
+/* Top Section */
+.top-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  background-color: rgba(220, 205, 157, 0.5);
+  padding-bottom: 2rem;
+
+}
+.top-section .image-container {
+  width: 60%;
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.image-container img {
+  max-width: 90%;
+  height: auto;
+  margin: 2rem 1.5rem;
+}
+
+.right {
+  width:40%;
+  float: right;
+  text-align: left;
+  vertical-align: middle;
+}
+.right h1 {
+  font-size: 2rem;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-bottom: 1.5rem;
+}
+.right h2 {
+  font-size: 1rem;
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.6;
+}
+button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Signika Negative', sans-serif;
+  background-color: rgb(192, 178, 131);
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  width: 80%;
+}
+button:hover{
+  color: rgb(244, 244, 244);
+  transition: color 1s linear .75ms;
+
+}
+
+@media only screen and (max-width: 480px) {
+  .top-section {
+  display: block;
+  flex-wrap: nowrap;
+  }
+  .top-section .image-container{
+  width: 100%;
+  padding: 0;
+  }
+  .image-container img {
+    width: 100%;
+    margin: 0;
+  }
+  .right {
+  float: none;
+  height: auto;
+  width: auto;
+  padding: 2rem 1rem;
+  }
+  button {
+  width: 100%;
+  }
+}
+/* Features Section */
+.feature-section {
+  display:inline-block;
+  width: 100%;
+}
+.info-desktop {
+    width: 60%;
+    position: relative;
+    background-color: rgb(244, 244, 244);
+    justify-content: center;
+    float: left;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.info-desktop .image-container {
+  width: 100%;
+}
+.image-container img {
+  max-width: 90%;
+  height: auto;
+  margin: 2rem 1.5rem;
+}
+.text-container {
+  margin: 1rem 1.5rem;
+}
+.text-container h1 {
+  font-size: 2rem;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-bottom: 1.5rem;
+}
+.text-container h3 {
+  font-size: .75rem;
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.6;
+  padding-bottom: 1.5rem;
+}
+.text-container h4 {
+  font-size: .5rem;
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.6;
+  padding-bottom: 2rem;
+}
+.right-desktop {
+  width: 40%;
+  position: relative;
+  float: right;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  display: inline-block;
+  background-color: rgb(244, 244, 244);
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.thumb {
+  display: inline-block;
+  width: 100%;
+}
+.thumb img{
+  height: auto;
+  width: 35%;
+  margin: 0.5rem;
+  box-sizing: border-box;
+  float: left;
+}
+.thumb a {
+  font-size: .75rem;
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.6;
+  color: rgb(55, 55, 55);
+  padding-top: 1rem;
+}
+.thumb a:hover {
+  font-weight: 700;
+  transition: font-weight 1s linear 0.75ms;
+}
+.text {
+  width: 60%;
+  float: right;
+  overflow-wrap: break-word;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding-top: 2rem;
+}
+.text h2 {
+  font-size: 1.25rem;
+  font-family: 'Signika Negative', sans-serif;
+  line-height: 1.3;
+}
+.text h3 {
+  font-size: .75rem;
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.6;
+  padding: .5rem 0;
+}
+.info-mobile {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  .feature-section {
+    display: none;
+  }
+
+  .info-mobile {
+    display:inline-block;
+    width: 100%;
+    background-color: rgb(244, 244, 244);
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .thumb-mobile img{
+    width: 90%;
+    height: auto;
+    margin: 1rem;
+    align-items: center;
+  }
+
+  .thumb-mobile h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 500;
+  }
+
+  .thumb-mobile h3 {
+    text-align: left;
+    padding-top: 0.75rem;
+    padding-left: 2rem;
+    font-size: .75rem;
+    line-height: 1.5rem;
+    font-family: 'Libre Baskerville', serif;
+}
+  .thumb-mobile a {
+    font-size: .75rem;
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.6;
+    color: rgb(55, 55, 55);
+    padding-top: .75rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+  }
+  .thumb-mobile a:hover {
+    font-weight: 700;
+    transition: font-weight 1s linear 0.75ms;
+  }
+}
+
+/* Start Learning Section */
+.learning-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  background-color: rgba(220, 205, 157, 0.5);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.learning-desktop h1 {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.item {
+  display: inline-block;
+  width: 25%;
+  margin: 1rem 1rem;
+  background-color: rgb(244, 244, 244);
+
+}
+
+.item img {
+  heigh: auto;
+  max-width: 100%
+}
+
+
+.item h2 {
+  text-align: left;
+  font-size: 1rem;
+  padding: 1rem;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 700;
+}
+
+.item h3 {
+  text-align: left;
+  padding: 0.5rem 1rem;
+  font-size: .75rem;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.item p {
+  padding-left: 1rem;
+  font-size: .75rem;
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.3rem;
+  padding-bottom: 2rem;
+  text-align: left;
+}
+
+.learning-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .learning-desktop {
+  display: none;
+
+  }
+  .learning-mobile {
+    display: block;
+    padding-bottom: 2rem;
+    background-color: rgba(220, 205, 157, 0.5)
+  }
+  .learning-mobile h1 {
+    font-size: 1.5rem;
+    width: 100%;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+  }
+  .learning-mobile h2 {
+    background-color: rgb(192, 178, 131);
+    text-align: left;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    margin: .5rem 1rem;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+  .learning-mobile h2:hover {
+    color: rgb(244, 244, 244);
+    transition: color 1s linear .75ms;
+}
+
+
+/* Thesis Exhibit Section */
+.thesis-section {
+  width: 100%;
+  background-color: rgb(244, 244, 244);
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+.thesis-desktop h1 {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.thesis-left {
+  width: 60%;
+  position: relative;
+  float: left;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+.thesis-left video {
+  width: 100%;
+  height: auto;
+}
+.description {
+  margin: 1rem 1.5rem;
+}
+
+.description h2 {
+  font-size: 1.5rem;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+.description h3 {
+  font-size: .75rem;
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.6;
+  text-align: left;
+}
+.thesis-right {
+  width: 40%;
+  position: relative;
+  float: right;
+  flex-wrap: wrap;
+}
+.content {
+  display: inline-block;
+  width: 100%;
+}
+.content img {
+  max-width: 35%;
+  height: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  float: left;
+}
+.project {
+  vertical-align: middle;
+  height: auto;
+  overflow-wrap: break-word;
+}
+.project h2 {
+  font-size: 1.5rem;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-top: 1rem;
+  text-align: left;
+}
+.project h3 {
+  font-size: .75rem;
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.6;
+  padding-top: 0.5rem;
+  text-align: left;
+}
+.thesis-mobile {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  .thesis-desktop {
+    display:none;
+  }
+  .thesis-mobile {
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
+  .thesis-mobile h1 {
+    font-size: 1.5rem;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    padding-top: 2rem;
+    text-align: center;
+  }
+  .thesis-mobile video {
+    padding-top: 1rem;
+    width: 100%;
+    height: auto;
+  }
+
+/* Footer */
+
+.footer-desktop {
+  display: flex;
+  background-color: rgb(244, 244, 244);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+}
+
+.footer-desktop p {
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  flex-grow: 1; /*This is the important bit*/
+}
+
+.footer-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 480px){
+.footer-desktop {
+  display: none;
+}
+.footer-mobile {
+  padding-top: 2.5rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+}
